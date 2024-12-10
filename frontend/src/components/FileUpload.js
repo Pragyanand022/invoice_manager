@@ -40,7 +40,7 @@ const FileUpload = () => {
 
     try {
       // Send file to backend
-      const response = await axios.post("https://invoice-manager-mocha.vercel.app/api/upload", formData, {
+      const response = await axios.post("/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
