@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const serverless = require("serverless-http");
 const multer = require("multer"); 
 const axios = require("axios");
 const fs = require("fs");
@@ -204,3 +205,4 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 // });
 
 module.exports = app;
+module.exports.handler = serverless(app);
