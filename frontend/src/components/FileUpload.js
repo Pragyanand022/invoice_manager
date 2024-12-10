@@ -64,7 +64,7 @@ const FileUpload = () => {
       }));
 
       const products = extractedValues.ProductsTab;
-      products.map(product => {
+      products.forEach(product => {
         dispatch(addProduct({
           productName: product.productName,
           quantity: product.quantity,
